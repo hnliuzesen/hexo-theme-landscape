@@ -1,6 +1,9 @@
 <% if (theme.google_analytics){ %>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics %>"></script>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0256d46589084276b1a235490b30549c"}'></script>
+<!-- End Cloudflare Web Analytics -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
