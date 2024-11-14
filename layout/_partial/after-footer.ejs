@@ -45,6 +45,16 @@
 </script>
 <% } %>
 
+<% if (theme.mermaid.enable) { %>
+    <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+    <script>
+    if (window.mermaid) {
+      var options = <%- JSON.stringify(theme.mermaid.options) %>;
+      mermaid.initialize(options);
+    }
+    </script>
+<% } %>
+
 <% if(theme.gitalk.enable && theme.gitalk.clientID && theme.valine.clientSecret){ %>
     <%- js(theme.cdn.gitalk.js) %>
     <script>
